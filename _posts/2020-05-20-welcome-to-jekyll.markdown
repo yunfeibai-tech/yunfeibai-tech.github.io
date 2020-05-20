@@ -24,24 +24,27 @@ Jekyll是用Ruby语言开发的，所以最简单的安装方式就是使用Ruby
 $ gem install jekyll
 
 由于大部分网页模板中都需要安装其他的插件，Bundler就显得很有必要了。它将帮助你打包管理这些插件。因此安装命令变为：
+```
 $ gem install jekyll bundler
+```
 
 如果你的电脑里缺少Ruby和RubyGems，请参考Download Ruby和Download RubyGems来获取相应帮助。
 需要指出的是，官方不推荐在MS Windows操作系统上安装。除此以外，Mac用户还需要安装Xcode和Command-Line Tools。
-Jekyll docs: Installation。
 ## 创建站点
 有了Jekyll，只需要短短的几行指令就可以得到一个简洁的博客页面：
+```
 ~ $ gem install jekyll bundler
 ~ $ jekyll new personal-blog
 ~ $ cd my-awesome-site
 ~/my-awesome-site $ bundle exec jekyll serve
+```
 
 然后打开浏览器访问http://localhost:4000，
 
 ## 发布文章
 Jeklly 的一个最好的特点是让作者关注blog本身。这是指什么呢？简单的说就是写博客的过程被融入了Jekyll的功能中。你只需简单的管理你电脑中的一个文件夹下的文本文件就可以写文章并方便的在线上发布。
 一个基本的 Jekyll 网站的目录结构一般是像这样的：
-<p>
+```
 .
  ├── _config.yml
  ├── _drafts
@@ -59,18 +62,18 @@ Jeklly 的一个最好的特点是让作者关注blog本身。这是指什么呢
  ├── _site
  ├── .jekyll-metadata
  └── index.html
-</p>
-Jekyll docs: Directory structure。
+```
 其中，_posts目录里放的就是你的文章了。文件格式很重要，必须要符合: YEAR-MONTH-DAY-title.MARKUP。永久链接可以在文章中自己定制，但是数据和标记语言都是根据文件名来确定的。
 只需要将新的文章放在目录_posts下，并将文件名改为YYYY-MM-DD-name-of-post.md。你可参考本文的源文件来撰写你自己的博文。将头信息中的内容更改为你需要的，并在之后附上你自己的内容即可。
-Jekyll docs: Front Matter以及Jekyll docs: Writing posts。
 ## 网站部署
 当你的网站在本地编译测试之后，就可以将其部署在GitHub Pages正式上线了！
 如果你已经是GitHub的用户了，接下来你将轻车熟路。你只需要按照格式创建一个新的仓库：ghname.github.io，其中ghname指代你的GitHub账号名称。然后，将你本地的网站上传到这个仓库中就可以通过连接https://ghname.github.io 来访问你的网站了。
 如果你的电脑已经安装并配置了git，那么就可以在终端中直接上传了。
-<p>$ git init</p>
-<p>$ git clone http://github.com/ghname/ghname.github.io.git</p>
-<p>$ git pull origin master</p>
-<p>$ git add --all</p>
-<p>$ git commit -m "leave a message"</p>
-<p>$ git push origin master</p>
+```
+$ git init
+$ git clone http://github.com/ghname/ghname.github.io.git
+$ git pull origin master
+$ git add --all
+$ git commit -m "leave a message"
+$ git push origin master
+```
